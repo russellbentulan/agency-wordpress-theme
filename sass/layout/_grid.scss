@@ -1,0 +1,15 @@
+.col-half {
+    flex-basis: calc( 50% - #{$gutter-horizontal} );
+
+    &:not(:last-child) {
+        margin-right: $gutter-horizontal;
+    }
+
+    @include media-query($medium-down) {
+        flex-basis: 100%;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+            margin-right: 0;
+        }
+    }
+}

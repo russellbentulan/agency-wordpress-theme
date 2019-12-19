@@ -1,0 +1,26 @@
+.wpcf7-form {
+    padding-bottom: $gutter-vertical-sm;
+
+    label {
+        font-weight: 700;
+    }
+
+    .contact {
+        &__field {
+            background-color: $midnight;
+            border: none;
+            color: #fff;
+            width: 100%;
+            padding: 1.5rem 1rem;
+
+            &:not(select) {
+                width: 100%;
+            }
+        }
+    }
+
+    input[type=submit] {
+        margin: $gutter-vertical-sm auto 0 auto;
+        display: inline;
+    }
+}

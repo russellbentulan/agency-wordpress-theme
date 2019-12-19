@@ -1,0 +1,126 @@
+.member-info {
+    flex-shrink: 1;
+    padding-left: $gutter-horizontal-lg;
+    padding-right: $gutter-horizontal;
+
+    &__img-container {
+        flex: calc( 50% - #{$gutter-horizontal-lg} );
+        padding-right: $gutter-horizontal-lg;
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 5rem;
+    }
+
+    &__job-title {
+        font-weight: 700;
+        color: $neon-pink;
+        font-size: 4rem;
+    }
+
+    &__additional {
+        font-size: 2rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__text {
+        color: $neon-pink;
+        font-weight: 700;
+    }
+
+    &__img {
+        max-height: 480px;
+        width: auto;
+    }
+
+    &__content {
+        background-color: $midnight;
+        // Calculate vertical padding and margin to extend background color into higher elements
+        padding: calc( #{$gutter-vertical-lg} * 2 ) $gutter-horizontal-lg $gutter-vertical $gutter-horizontal-lg;
+        margin-top: calc( #{$gutter-vertical} - #{$gutter-vertical-lg} * 2 );
+    }
+}
+
+
+
+.member-selector {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    justify-content: center;
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    
+    &:not(:last-child) {
+        margin-right: $gutter-horizontal-sm;
+    }
+
+    &__container {
+        padding-top: $gutter-vertical-sm;
+
+        .wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &--previous {
+        @extend .member-selector;
+        margin-right: auto;
+        @include media-query($medium-down) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &--next {
+        @extend .member-selector;
+        margin-left: auto;
+        @include media-query($medium-down) {
+            flex-direction: column;
+        }
+    }
+
+    &__details,
+    &__img-container {
+        display: inline-block;
+        line-height: 1.5;
+    }
+
+    &__img-container {
+        margin: 0 2rem;
+    }
+    
+    &__img {
+        border-radius: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__cta-text {
+        color: $neon-pink;
+        text-transform: uppercase;
+        font-size: 2rem;
+
+        @include media-query($small) {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            transition: .2s color;
+            color: #FFF;
+        }
+    }
+
+    &__name {
+        padding-bottom: .5rem;
+    }
+
+    &__job-title {
+        color: $neon-pink;
+    }
+}

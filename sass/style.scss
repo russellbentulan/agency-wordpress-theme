@@ -1,0 +1,35 @@
+/*!
+* Theme Name: Rocket Vision
+* Description: Theme created in the Custom Themes course at HackerYou
+* Version: 1.0
+* Author: Russell Bentulan
+*/
+
+@import 'abstracts/variables',
+        'abstracts/utilities',
+        'abstracts/placeholders',
+        'abstracts/functions',
+        'abstracts/mixins';
+
+@import 'vendors/normalize';
+
+@import 'base/base',
+        'base/typography';
+
+@import 'layout/grid',
+        'layout/navigation',
+        'layout/main',
+        'layout/comments',
+        'layout/contact-form',
+        'layout/footer';
+
+@import 'components/buttons',
+        'components/icons';
+
+@import 'pages/home',
+        'pages/services',
+        'pages/about',
+        'pages/blog',
+        'pages/contact',
+        'pages/single',
+        'pages/single-team_members';

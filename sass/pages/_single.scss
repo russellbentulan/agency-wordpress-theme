@@ -1,0 +1,51 @@
+.entry {
+    &__header {
+        display: flex;
+        padding: 0 $gutter-horizontal-lg 0 $gutter-horizontal-lg;
+
+        @include media-query($medium-down) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__info {
+        flex-basis: calc( 50% - #{$gutter-horizontal} );
+        padding-right: $gutter-horizontal;
+    }
+
+    &__category {
+        text-transform: uppercase;
+        color: $neon-pink;
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
+
+    &__meta {
+        color: $neon-pink;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: 5rem;
+    }
+
+    &__img-container {
+        margin-right: auto;
+        padding-right: $gutter-horizontal-lg;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__content {
+        background-color: $midnight;
+        // Calculate vertical padding and margin to extend background color into higher elements
+        padding: calc( #{$gutter-vertical} * 2 ) $gutter-horizontal-lg $gutter-vertical $gutter-horizontal-lg;
+        margin-top: calc( #{$gutter-vertical} - #{$gutter-vertical} * 1.5 );
+
+        @include media-query($medium-down) {
+            margin-top: -14rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+
+.footer {
+    background-color: $royal;
+    color: #fff;
+    padding: calc( #{$gutter-vertical-sm} / 2 ) 0;
+
+    .flex {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__logo{
+        text-transform: uppercase;
+        @extend %heading;
+        font-size: 3.2rem;
+        max-width: 25rem;
+        line-height: 1;
+    }
+
+    .socials{
+        display: flex;
+        align-items: flex-start;
+
+        &__text{
+            margin-right: 2rem;
+        }
+
+        &__list {
+            list-style: none;
+            display: inline-block;
+
+            .menu-item {
+                display: inline-block;
+                @extend .button--animated;
+                
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}

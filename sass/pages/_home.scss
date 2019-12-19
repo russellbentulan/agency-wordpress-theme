@@ -1,0 +1,92 @@
+.hero {
+    padding-top: 12.5rem;
+    padding-bottom: 10rem;
+
+
+    // Places rockets in the background
+    & ~ * {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        text-align: left;
+        max-width: 30rem;
+        margin-right: auto;
+        padding-left: $gutter-horizontal;
+        font-size: 8rem;
+    }
+
+    &__title {
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        padding-left: $gutter-horizontal;
+
+        @include media-query($small) {
+            font-size: 6rem;
+        }
+    }
+
+    &__text {
+        width: 90%;
+        max-width: 800px;
+        
+        p {
+            font-size: 1.8rem;
+            padding-left: $gutter-horizontal;
+        }
+        @include media-query($small) {
+            font-size: 6rem;
+        }
+    }
+
+    &__btn {
+        margin-top: 1.75rem;
+        margin-left: $gutter-horizontal;
+    }
+
+}
+
+.home-about {
+    @extend %section;
+    margin-top: $gutter-vertical;
+
+    @include media-query($medium-down) {
+        flex-direction: column-reverse;
+    }
+
+    & *:not(:last-child) {
+        margin-bottom: 0;
+        margin-top: 2rem;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.featured-employee {
+
+    @extend %section;
+    margin-top: $gutter-vertical;
+
+    align-items: center;
+
+    &__title {
+        padding: $gutter-vertical-sm 0;
+    }
+
+    &__heading {
+        color: $neon-pink;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+}

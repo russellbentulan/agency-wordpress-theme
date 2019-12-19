@@ -1,0 +1,11 @@
+%section {
+    padding: $gutter-vertical $gutter-horizontal-lg;
+    background-color: $midnight;
+    align-items: center;
+}
+
+%heading {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}

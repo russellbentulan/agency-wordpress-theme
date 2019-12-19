@@ -1,0 +1,86 @@
+
+.intro {
+    .wrapper {
+        @extend %section;
+        
+        @include media-query($medium-down) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__heading {
+        text-align: left;
+    }
+
+    margin-bottom: $gutter-vertical;
+    
+    &__img {
+        height: auto;
+    }
+}
+
+.mission-statement {
+    .wrapper {
+        @extend %section;
+        max-width: 1250px;
+    }
+
+    &__img {
+        height: auto;
+    }
+}
+
+.teams {
+    padding: $gutter-vertical $gutter-horizontal;
+    padding-top: 0;
+
+    .wrapper {
+        background-image: linear-gradient(to bottom, $royal-two , $midnight);
+        padding: calc( #{$gutter-vertical} / 2 ) 0;
+    }
+
+    .team { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__name {
+            flex-basis: 100%;
+            text-align: center;
+            margin: $gutter-horizontal auto;
+        }
+
+        .team-member {
+            flex-basis: calc( 25% - #{$gutter-horizontal} * 3 );
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        
+            &__thumbnail {
+                border-radius: 100%;
+                width: 100%;
+                height: auto;
+            }
+        
+            &__job-title {
+                color: $neon-pink;
+            }
+        }  
+
+        & > *:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+}
+
+.contact-section {
+    text-align: center;
+
+    &__heading {
+        @extend %heading;
+        text-transform: none;
+        font-size: 3.6rem;
+        margin-bottom: calc( #{$gutter-vertical} / 2 );
+    }
+}

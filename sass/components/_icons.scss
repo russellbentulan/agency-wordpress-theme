@@ -1,0 +1,21 @@
+.icon:before {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #FFF;
+}
+
+.chevron-down:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f078";
+}
+
+.chevron-right:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f054";
+}

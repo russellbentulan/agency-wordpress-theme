@@ -1,0 +1,53 @@
+.main-content {
+    padding-bottom: $gutter-vertical;
+}
+
+.text-box {
+    & > *:not(:last-child) {
+        margin-bottom: $gutter-vertical-xs;
+    }
+  }
+
+.header-container {
+  height: 65vh;
+  max-height: 55rem;
+  position: relative;
+  display: flex;
+
+  & ~ * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .heading--primary {
+    align-self: center;
+    max-width: 40rem;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.rockets-img {
+  display: block;
+  position: absolute;
+  top: 0;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 15vw) -2rem;
+
+  height: 70vh;
+  width: 100%; 
+  z-index: -1;
+
+  & ~ * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--home {
+    background-position: top right;
+    height: 100%;
+    width: 100%;
+  }
+}

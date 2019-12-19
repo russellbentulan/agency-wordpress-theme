@@ -1,0 +1,44 @@
+//Color Palette
+$neon-pink: #ff009b;
+$pale-mauve: #fbf8fa;
+$midnight: #020726;
+$royal: #062288;
+$royal-two: #0c2182;
+$blood: #810207;
+
+// Mobile Breakpoints
+$xl: 1450px;
+$lg: 1200;
+$md: 768px;
+$sm: 600px;
+
+$gutter-horizontal: 3.5rem;
+$gutter-horizontal-sm: calc(#{$gutter-horizontal} / 2);
+$gutter-horizontal-lg: calc(#{$gutter-horizontal} * 2);
+
+$gutter-vertical: 8rem;
+$gutter-vertical-xs: calc(#{$gutter-vertical} / 4);
+$gutter-vertical-sm: calc(#{$gutter-vertical} / 2);
+$gutter-vertical-lg: 10rem;
+
+
+// Breakpoints used with the media-query mixin
+$small: 'small';
+$medium: 'medium';
+$medium-down: 'medium-down';
+$medium-up: 'medium-up';
+$large: 'large';
+$large-down: 'large-down';
+$large-up: 'large-up';
+$widescreen: 'widescreen';
+
+$breakpoints: (
+  $small '(max-width: #{$sm - 1})',
+  $medium '(min-width: #{$sm}) and (max-width: #{$md - 1})',
+  $medium-down '(max-width: #{$md - 1})',
+  $medium-up '(min-width: #{$md})',
+  $large '(min-width: #{$lg}) and (max-width: #{$xl - 1})',
+  $large-down '(max-width: #{$lg - 1})',
+  $large-up '(min-width: #{$lg})',
+  $widescreen '(min-width: #{$xl})'
+);
